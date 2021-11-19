@@ -5,28 +5,29 @@
   <img src="3rd-floor.png" alt="3rd floor floorplan" />
 
   <div class="hoyesterett">
-    <div class="zone zone-3p" data-zone="3p" />
-    <div class="zone zone-3o" data-zone="3o" />
-    <div class="zone zone-3n" data-zone="3n" />
-    <div class="zone zone-3m" data-zone="3m" />
-    <div class="zone zone-3l" data-zone="3l" />
-    <div class="zone zone-3k" data-zone="3k" />
-    <div class="zone zone-3j" data-zone="3j" />
-    <div class="zone zone-3s" data-zone="3s" />
-    <div class="zone zone-3r" data-zone="3r" />
-    <div class="zone zone-3q" data-zone="3q" />
-    <div class="zone zone-3i" data-zone="3i" />
-    <div class="zone zone-3h" data-zone="3h" />
-    <div class="zone zone-3g" data-zone="3g" />
+    <div class="zone collab-low zone-3p" data-zone="3p" />
+    <div class="zone collab-low zone-3o" data-zone="3o" />
+    <div class="zone collab-low zone-3n" data-zone="3n" />
+    <div class="zone collab-low zone-3m" data-zone="3m" />
+    <div class="zone collab-low zone-3s" data-zone="3s" />
+    <div class="zone collab-low zone-3r" data-zone="3r" />
+    <div class="zone collab-low zone-3q" data-zone="3q" />
+
+    <div class="zone collab-medium zone-3l" data-zone="3l" />
+    <div class="zone collab-medium zone-3k" data-zone="3k" />
+    <div class="zone collab-medium zone-3j" data-zone="3j" />
+    <div class="zone collab-medium zone-3i" data-zone="3i" />
+    <div class="zone collab-medium zone-3h" data-zone="3h" />
+    <div class="zone collab-medium zone-3g" data-zone="3g" />
   </div>
 
   <div class="grensen">
-    <div class="zone zone-3f" data-zone="3f" />
-    <div class="zone zone-3e" data-zone="3e" />
-    <div class="zone zone-3d" data-zone="3d" />
-    <div class="zone zone-3a" data-zone="3a" />
-    <div class="zone zone-3b" data-zone="3b" />
-    <div class="zone zone-3c" data-zone="3c" />
+    <div class="zone collab-high zone-3f" data-zone="3f" />
+    <div class="zone collab-high zone-3e" data-zone="3e" />
+    <div class="zone collab-high zone-3d" data-zone="3d" />
+    <div class="zone collab-high zone-3a" data-zone="3a" />
+    <div class="zone collab-high zone-3b" data-zone="3b" />
+    <div class="zone collab-high zone-3c" data-zone="3c" />
   </div>
 </div>
 
@@ -48,7 +49,7 @@
 
   .zone {
     position: absolute;
-    background-color: rgba(50, 60, 200, 0.5);
+    background-color: rgba(100, 100, 100, 0.5);
 
     width: 6rem;
     height: 6rem;
@@ -60,18 +61,32 @@
 
     text-transform: uppercase;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
     color: var(--pure-white);
-    font-size: 150%;
+    font-size: 100%;
     font-weight: bold;
     text-shadow: 0 0 1em #000a;
   }
   .zone::after {
+    margin-top: 0.25em;
+    margin-left: 0.25em;
     content: attr(data-zone);
     background-color: #0005;
     padding: 0.25em;
     border-radius: 0.25em;
+  }
+
+  .zone.collab-low {
+    background-color: rgba(16, 187, 16, 0.5);
+  }
+  .zone.collab-medium {
+    background-color: rgba(50, 60, 200, 0.5);
+  }
+  .zone.collab-high {
+    background-color: rgba(200, 50, 50, 0.5);
   }
 
   .zone-3p {

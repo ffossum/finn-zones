@@ -5,11 +5,11 @@
   <img src="5th-floor.png" alt="5th floor floorplan" />
 
   <div class="grensen">
-    <div class="zone zone-5e" data-zone="5e" />
-    <div class="zone zone-5d" data-zone="5d" />
-    <div class="zone zone-5a" data-zone="5a" />
-    <div class="zone zone-5b" data-zone="5b" />
-    <div class="zone zone-5c" data-zone="5c" />
+    <div class="zone collab-high zone-5e" data-zone="5e" />
+    <div class="zone collab-high zone-5d" data-zone="5d" />
+    <div class="zone collab-high zone-5a" data-zone="5a" />
+    <div class="zone collab-high zone-5b" data-zone="5b" />
+    <div class="zone collab-high zone-5c" data-zone="5c" />
   </div>
 </div>
 
@@ -26,7 +26,7 @@
 
   .zone {
     position: absolute;
-    background-color: rgba(50, 60, 200, 0.5);
+    background-color: rgba(100, 100, 100, 0.5);
 
     width: 6rem;
     height: 6rem;
@@ -38,25 +38,39 @@
 
     text-transform: uppercase;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
     color: var(--pure-white);
-    font-size: 150%;
+    font-size: 100%;
     font-weight: bold;
     text-shadow: 0 0 1em #000a;
   }
   .zone::after {
+    margin-top: 0.25em;
+    margin-left: 0.25em;
     content: attr(data-zone);
     background-color: #0005;
     padding: 0.25em;
     border-radius: 0.25em;
   }
 
+  .zone.collab-low {
+    background-color: rgba(16, 187, 16, 0.5);
+  }
+  .zone.collab-medium {
+    background-color: rgba(50, 60, 200, 0.5);
+  }
+  .zone.collab-high {
+    background-color: rgba(200, 50, 50, 0.5);
+  }
+
   .zone-5e {
     height: 4rem;
-    top: 10rem;
-    left: 73rem;
-    width: 6rem;
+    top: 9rem;
+    left: 74rem;
+    width: 5rem;
   }
 
   .zone-5d {
