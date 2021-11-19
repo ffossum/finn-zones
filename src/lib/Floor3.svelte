@@ -5,27 +5,28 @@
   <img src="3rd-floor.png" alt="3rd floor floorplan" />
 
   <div class="hoyesterett">
-    <div class="zone zone-3p" />
-    <div class="zone zone-3o" />
-    <div class="zone zone-3n" />
-    <div class="zone zone-3m" />
-    <div class="zone zone-3l" />
-    <div class="zone zone-3k" />
-    <div class="zone zone-3j" />
-    <div class="zone zone-3s" />
-    <div class="zone zone-3r" />
-    <div class="zone zone-3q" />
-    <div class="zone zone-3i" />
-    <div class="zone zone-3h" />
-    <div class="zone zone-3g" />
+    <div class="zone zone-3p" data-zone="3p" />
+    <div class="zone zone-3o" data-zone="3o" />
+    <div class="zone zone-3n" data-zone="3n" />
+    <div class="zone zone-3m" data-zone="3m" />
+    <div class="zone zone-3l" data-zone="3l" />
+    <div class="zone zone-3k" data-zone="3k" />
+    <div class="zone zone-3j" data-zone="3j" />
+    <div class="zone zone-3s" data-zone="3s" />
+    <div class="zone zone-3r" data-zone="3r" />
+    <div class="zone zone-3q" data-zone="3q" />
+    <div class="zone zone-3i" data-zone="3i" />
+    <div class="zone zone-3h" data-zone="3h" />
+    <div class="zone zone-3g" data-zone="3g" />
   </div>
+
   <div class="grensen">
-    <div class="zone zone-3f" />
-    <div class="zone zone-3e" />
-    <div class="zone zone-3d" />
-    <div class="zone zone-3a" />
-    <div class="zone zone-3b" />
-    <div class="zone zone-3c" />
+    <div class="zone zone-3f" data-zone="3f" />
+    <div class="zone zone-3e" data-zone="3e" />
+    <div class="zone zone-3d" data-zone="3d" />
+    <div class="zone zone-3a" data-zone="3a" />
+    <div class="zone zone-3b" data-zone="3b" />
+    <div class="zone zone-3c" data-zone="3c" />
   </div>
 </div>
 
@@ -56,6 +57,21 @@
     left: 1rem;
 
     border-radius: 0.5rem;
+
+    text-transform: uppercase;
+
+    display: grid;
+    place-items: center;
+    color: var(--pure-white);
+    font-size: 150%;
+    font-weight: bold;
+    text-shadow: 0 0 1em #000a;
+  }
+  .zone::after {
+    content: attr(data-zone);
+    background-color: #0005;
+    padding: 0.25em;
+    border-radius: 0.25em;
   }
 
   .zone-3p {
