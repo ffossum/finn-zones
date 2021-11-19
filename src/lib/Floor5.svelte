@@ -1,13 +1,75 @@
 <script lang="ts">
 </script>
 
-<div>
+<div class="floorplan">
   <img src="5th-floor.png" alt="5th floor floorplan" />
+
+  <div class="grensen">
+    <div class="zone zone-5e" />
+    <div class="zone zone-5d" />
+    <div class="zone zone-5a" />
+    <div class="zone zone-5b" />
+    <div class="zone zone-5c" />
+  </div>
 </div>
 
 <style>
-  div {
+  .floorplan {
     position: relative;
+  }
+
+  .grensen {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .zone {
+    position: absolute;
+    background-color: rgba(50, 60, 200, 0.5);
+
+    width: 6rem;
+    height: 6rem;
+
+    top: 1rem;
+    left: 1rem;
+
+    border-radius: 0.5rem;
+  }
+
+  .zone-5e {
+    height: 4rem;
+    top: 10rem;
+    left: 73rem;
+    width: 6rem;
+  }
+
+  .zone-5d {
+    height: 5rem;
+    top: 9rem;
+    left: 81rem;
+    width: 7rem;
+  }
+
+  .zone-5a {
+    height: 5rem;
+    top: 17rem;
+    left: 68rem;
+    width: 4rem;
+  }
+
+  .zone-5b {
+    height: 5rem;
+    top: 17rem;
+    left: 73rem;
+    width: 6rem;
+  }
+
+  .zone-5c {
+    height: 5rem;
+    top: 18rem;
+    left: 81rem;
+    width: 7rem;
   }
 
   img {
