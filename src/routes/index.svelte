@@ -4,6 +4,9 @@
 
 <script lang="ts">
   let selectedFloor = "3";
+
+  import Floor3 from "$lib/Floor3.svelte";
+  import Floor5 from "$lib/Floor5.svelte";
 </script>
 
 <svelte:head>
@@ -27,9 +30,9 @@
   </ul>
 
   {#if selectedFloor === "3"}
-    <img src="3rd-floor.png" alt="3rd floor floorplan" />
+    <Floor3 />
   {:else if selectedFloor === "5"}
-    <img src="5th-floor.png" alt="5th floor floorplan" />
+    <Floor5 />
   {/if}
 </section>
 
@@ -45,6 +48,7 @@
     margin-right: 0.5em;
   }
   section {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
