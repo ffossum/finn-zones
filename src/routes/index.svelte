@@ -11,20 +11,39 @@
 </svelte:head>
 
 <section>
-  <label for="floor-selector"> Floor </label>
-  <select id="floor-selector" bind:value={selectedFloor}>
-    <option value="3">3rd floor</option>
-    <option value="5">5th floor</option>
-  </select>
+  <ul>
+    <li>
+      <label for="3rd-floor-button">
+        <input type="radio" id="3rd-floor-button" bind:group={selectedFloor} value="3" />
+        3rd floor
+      </label>
+    </li>
+    <li>
+      <label for="5th-floor-button">
+        <input type="radio" id="5th-floor-button" bind:group={selectedFloor} value="5" />
+        5th floor
+      </label>
+    </li>
+  </ul>
 
   {#if selectedFloor === "3"}
     <img src="3rd-floor.png" alt="3rd floor floorplan" />
   {:else if selectedFloor === "5"}
-    <img src="5th-floor.png" alt="4th floor floorplan" />
+    <img src="5th-floor.png" alt="5th floor floorplan" />
   {/if}
 </section>
 
 <style>
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    display: flex;
+  }
+  li {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
   section {
     display: flex;
     flex-direction: column;
