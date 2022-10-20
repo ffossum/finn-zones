@@ -3,7 +3,9 @@
 </script>
 
 <script lang="ts">
-  let selectedFloor = "3";
+  type Floor = "3" | "5";
+
+  let selectedFloor: Floor = "3";
 
   import Floor3 from "$lib/Floor3.svelte";
   import Floor5 from "$lib/Floor5.svelte";
